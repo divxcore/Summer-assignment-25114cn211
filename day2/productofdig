@@ -1,0 +1,10 @@
+n = int(input("Enter a number: "))
+temp = n
+product = 1
+
+while temp > 0:
+    digit = temp % 10      
+    product = product * digit  
+    temp = temp // 10      
+
+print(f"Sum of digits = {product}")
