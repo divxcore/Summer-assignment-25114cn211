@@ -3,8 +3,8 @@ temp = n
 total = 0
 
 while temp > 0:
-    digit = temp % 10      # get last digit
-    total = total + digit  # add it to sum
-    temp = temp // 10      # remove last digit
+    digit = temp % 10      
+    total = total + digit  
+    temp = temp // 10      
 
 print(f"Sum of digits = {total}")
