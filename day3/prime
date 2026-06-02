@@ -8,5 +8,5 @@ else:
             break
     else:
             print("prime number")
-               2
+               
             
