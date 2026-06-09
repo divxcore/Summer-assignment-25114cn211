@@ -1,0 +1,7 @@
+n = 5
+
+for i in range(n):   # 0 to 4
+    ch = chr(65 + i)   # ASCII: A=65
+    for j in range(i + 1):
+        print(ch, end="")
+    print()
