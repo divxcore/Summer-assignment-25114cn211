@@ -1,0 +1,20 @@
+def is_armstrong(num):
+    digits = len(str(num))
+    temp = num
+    total = 0
+
+    while temp != 0:
+        remainder = temp % 10
+        total += remainder ** digits
+        temp //= 10
+
+    return total == num
+
+
+
+n = int(input("Enter a number: "))
+
+if is_armstrong(n):
+    print("Armstrong Number")
+else:
+    print("Not Armstrong")
