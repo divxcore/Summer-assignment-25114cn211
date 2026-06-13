@@ -1,0 +1,16 @@
+n = int(input("enter number of elements: "))
+print("Enter elements of array 1:")
+arr1 = list(map(int,input().split()))
+
+print(arr1)
+
+print("Enter elements of array 2:")
+arr2 = list(map(int,input().split()))
+
+print(arr2)
+
+arr3 = []
+for i in range(n):
+    result = arr1[i] + arr2[i]
+    arr3.append(result)
+print(arr3)

@@ -1,0 +1,7 @@
+arr1 = [1,2,3]
+arr2 = [3,4,5]
+arr3 = []
+for i in range(3):
+    result = arr1[i] + arr2[i]
+    arr3.append(result)
+print(arr3)

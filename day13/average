@@ -1,0 +1,27 @@
+n = int(input("enter number of elements: "))
+print("Enter elements of array 1:")
+arr1 = list(map(int,input().split()))
+
+print(arr1)
+
+print("Enter elements of array 2:")
+arr2 = list(map(int,input().split()))
+
+print(arr2)
+
+if len(arr1) != n or len(arr2) != n:
+    print("Error: Enter exactly", n, "elements")
+    exit()
+    
+arr3 = []
+for i in range(n):
+    result = arr1[i] + arr2[i]
+    arr3.append(result)
+print(arr3)
+
+add = 0
+
+for i in range(n):
+    add += arr3[i]
+avg = add/len(arr3)
+print(avg)
