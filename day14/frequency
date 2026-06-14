@@ -1,0 +1,11 @@
+arr = [1, 2, 2, 3, 2, 4]
+
+key = int(input("Enter element: "))
+
+count = 0
+
+for num in arr:
+    if num == key:
+        count += 1
+
+print("Frequency =", count)
