@@ -1,0 +1,19 @@
+arr = list(map(int, input("Enter elements: ").split()))
+
+d = {}
+
+for i in arr:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+m = 0
+e = 0
+
+for k in d:
+    if d[k] > m:
+        m = d[k]
+        e = k
+
+print("Max frequency element:", e)

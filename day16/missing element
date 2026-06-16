@@ -1,0 +1,10 @@
+arr = list(map(int, input("Enter elements: ").split()))
+n = int(input("Enter n: "))
+
+total = n * (n + 1) // 2
+s = 0
+
+for i in arr:
+    s += i
+
+print("Missing number:", total - s)

@@ -1,0 +1,9 @@
+arr = list(map(int, input("Enter elements: ").split()))
+
+r = []
+
+for i in arr:
+    if i not in r:
+        r.append(i)
+
+print("After removing duplicates:", r)
