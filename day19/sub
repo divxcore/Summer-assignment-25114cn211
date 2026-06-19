@@ -1,0 +1,31 @@
+r = int(input("enter number of rows: "))
+c = int(input("enter number of columns: "))
+
+print("Enter first matrix:")
+A = []
+for i in range(r):
+    row = []
+    for j in range(c):
+        element = int(input(f"A[{i}][{j}]: "))
+        row.append(element)
+    A.append(row)
+
+print("Enter second matrix:")
+B = []
+for i in range(r):
+    row = []
+    for j in range(c):
+        element = int(input(f"B[{i}][{j}]: "))
+        row.append(element)
+    B.append(row)
+
+result = []
+for i in range(r):
+    row = []
+    for j in range(c):
+        row.append(A[i][j] - B[i][j])
+    result.append(row)
+
+print("Result (Subtraction):")
+for row in result:
+    print(*row)

@@ -1,0 +1,22 @@
+r = int(input("enter number of rows: "))
+c = int(input("enter number of columns: "))
+
+mat = []
+print("Enter matrix:")
+for i in range(r):
+    row = []
+    for j in range(c):
+        element = int(input(f"({i},{j}): "))
+        row.append(element)
+    mat.append(row)
+
+transpose = []
+for i in range(c):
+    row = []
+    for j in range(r):
+        row.append(mat[j][i])
+    transpose.append(row)
+
+print("Transpose matrix:")
+for row in transpose:
+    print(*row)
