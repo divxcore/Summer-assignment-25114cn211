@@ -1,0 +1,21 @@
+n = int(input("enter size of square matrix: "))
+
+mat = []
+print("enter matrix:")
+for i in range(n):
+    row = []
+    for j in range(n):
+        row.append(int(input()))
+    mat.append(row)
+
+flag = True
+for i in range(n):
+    for j in range(n):
+        if mat[i][j] != mat[j][i]:
+            flag = False
+            break
+
+if flag:
+    print("symmetric matrix")
+else:
+    print("not symmetric matrix")

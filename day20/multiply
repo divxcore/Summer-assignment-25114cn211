@@ -1,0 +1,38 @@
+r1 = int(input("enter rows of first matrix: "))
+c1 = int(input("enter columns of first matrix: "))
+
+r2 = int(input("enter rows of second matrix: "))
+c2 = int(input("enter columns of second matrix: "))
+
+if c1 != r2:
+    print("multiplication not possible")
+else:
+    A = []
+    print("enter first matrix:")
+    for i in range(r1):
+        row = []
+        for j in range(c1):
+            row.append(int(input()))
+        A.append(row)
+
+    B = []
+    print("enter second matrix:")
+    for i in range(r2):
+        row = []
+        for j in range(c2):
+            row.append(int(input()))
+        B.append(row)
+
+    result = []
+    for i in range(r1):
+        row = []
+        for j in range(c2):
+            s = 0
+            for k in range(c1):
+                s += A[i][k] * B[k][j]
+            row.append(s)
+        result.append(row)
+
+    print("result:")
+    for i in result:
+        print(i)
