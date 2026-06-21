@@ -1,0 +1,13 @@
+s = input("enter a string: ").lower()
+cvowel = 0
+ccons = 0
+
+for ch in s:
+    if ch.isalpha():
+        if ch in "aeiou":
+            cvowel += 1
+        else:
+            ccons += 1
+
+print("vowels:", cvowel)
+print("consonants:", ccons)
