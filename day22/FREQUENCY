@@ -1,0 +1,7 @@
+s = input("enter a string: ")
+x = input('enter a character to find frequency: ')
+count = 0
+for ch in s :
+    if x == ch:
+        count += 1
+print("frequency of", x, "is:", count)
