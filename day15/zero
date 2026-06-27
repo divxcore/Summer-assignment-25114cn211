@@ -11,6 +11,6 @@ for i in range(n):
 
 while j < n:
     arr[j] = 0
-    j += 1
+    j += 1da
 
 print(arr)
