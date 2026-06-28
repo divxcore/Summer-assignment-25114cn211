@@ -1,0 +1,33 @@
+class Library:
+    def __init__(self):
+        self.books = {}
+
+    def add_book(self, book):
+        self.books[book] = "Available"
+        print(f"{book} added.")
+
+    def issue_book(self, book):
+        if book in self.books and self.books[book] == "Available":
+            self.books[book] = "Issued"
+            print(f"{book} issued.")
+        else:
+            print(f"{book} not available.")
+
+    def return_book(self, book):
+        if book in self.books:
+            self.books[book] = "Available"
+            print(f"{book} returned.")
+
+    def display(self):
+        print("Books:")
+        for book, status in self.books.items():
+            print(book, "-", status)
+
+
+lib = Library()
+lib.add_book("Python")
+lib.add_book("Java")
+lib.issue_book("Python")
+lib.display()
+lib.return_book("Python")
+lib.display()
