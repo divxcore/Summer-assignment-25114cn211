@@ -1,0 +1,24 @@
+class TicketBooking:
+    def __init__(self, total_seats):
+        self.total_seats = total_seats
+
+    def book_ticket(self, seats):
+        if seats <= self.total_seats:
+            self.total_seats -= seats
+            print(f"{seats} tickets booked.")
+        else:
+            print("Not enough seats available")
+
+    def cancel_ticket(self, seats):
+        self.total_seats += seats
+        print(f"{seats} tickets cancelled.")
+
+    def display(self):
+        print("Available seats:", self.total_seats)
+
+
+tb = TicketBooking(50)
+tb.book_ticket(5)
+tb.display()
+tb.cancel_ticket(2)
+tb.display()

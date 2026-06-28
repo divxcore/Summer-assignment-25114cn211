@@ -1,0 +1,32 @@
+class ContactManager:
+    def __init__(self):
+        self.contacts = {}
+
+    def add_contact(self, name, phone):
+        self.contacts[name] = phone
+        print(f"{name} added.")
+
+    def delete_contact(self, name):
+        if name in self.contacts:
+            del self.contacts[name]
+            print(f"{name} deleted.")
+
+    def search_contact(self, name):
+        if name in self.contacts:
+            print(f"{name}: {self.contacts[name]}")
+        else:
+            print("Contact not found")
+
+    def display(self):
+        print("Contacts:")
+        for name, phone in self.contacts.items():
+            print(name, "-", phone)
+
+
+cm = ContactManager()
+cm.add_contact("Alice", "12345")
+cm.add_contact("Bob", "67890")
+cm.display()
+cm.search_contact("Alice")
+cm.delete_contact("Bob")
+cm.display()
