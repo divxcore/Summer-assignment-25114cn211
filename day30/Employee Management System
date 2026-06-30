@@ -1,0 +1,40 @@
+# Employee Management System
+
+emp_names = []
+emp_ids = []
+
+def add_employee():
+    name = input("Enter employee name: ")
+    emp_id = input("Enter employee ID: ")
+    emp_names.append(name)
+    emp_ids.append(emp_id)
+    print("Employee added!\n")
+
+def display_employee():
+    print("\n--- Employee List ---")
+    for i in range(len(emp_names)):
+        print(f"ID: {emp_ids[i]}, Name: {emp_names[i]}")
+    print()
+
+def search_employee():
+    emp_id = input("Enter ID to search: ")
+    if emp_id in emp_ids:
+        index = emp_ids.index(emp_id)
+        print(f"Found: {emp_names[index]}\n")
+    else:
+        print("Employee not found\n")
+
+while True:
+    print("1.Add Employee\n2.Display\n3.Search\n4.Exit")
+    ch = input("Enter choice: ")
+
+    if ch == '1':
+        add_employee()
+    elif ch == '2':
+        display_employee()
+    elif ch == '3':
+        search_employee()
+    elif ch == '4':
+        break
+    else:
+        print("Invalid choice\n")
