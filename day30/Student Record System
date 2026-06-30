@@ -1,0 +1,40 @@
+# Student Record System
+
+names = []
+marks = []
+
+def add_student():
+    name = input("Enter student name: ")
+    mark = int(input("Enter marks: "))
+    names.append(name)
+    marks.append(mark)
+    print("Student added successfully!\n")
+
+def display_students():
+    print("\n--- Student Records ---")
+    for i in range(len(names)):
+        print(f"Name: {names[i]}, Marks: {marks[i]}")
+    print()
+
+def search_student():
+    name = input("Enter name to search: ")
+    if name in names:
+        index = names.index(name)
+        print(f"Found: {name}, Marks: {marks[index]}\n")
+    else:
+        print("Student not found\n")
+
+while True:
+    print("1. Add Student\n2. Display\n3. Search\n4. Exit")
+    choice = input("Enter choice: ")
+
+    if choice == '1':
+        add_student()
+    elif choice == '2':
+        display_students()
+    elif choice == '3':
+        search_student()
+    elif choice == '4':
+        break
+    else:
+        print("Invalid choice\n")
